@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace FifteenGame.Test
 {
 	[TestClass]
-	public class GameImmutableProductiveTests : GameTests
+	public class GameImmutableProductiveTests : GameImmutableTests
 	{
 		public GameImmutableProductiveTests() {
 			creator = new GameImmutableProductiveCreator();
@@ -51,6 +51,10 @@ namespace FifteenGame.Test
 		[ExpectedException(typeof(ArgumentException))]
 		public override void Should_ThrowException_When_TryToCreateGameWithTwoZeroFields() =>
 			base.Should_ThrowException_When_TryToCreateGameWithTwoZeroFields();
+
+		[TestMethod]
+		public override void Should_KeepInitialStateOfFields_When_ShiftValue() => 
+			base.Should_KeepInitialStateOfFields_When_ShiftValue();
 
 	}
 }

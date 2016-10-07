@@ -14,15 +14,15 @@ namespace FifteenGame.Test
 		}
 
 		[TestMethod]
-		public override void TestShiftingSquare2x2() 
+		public override void TestShiftingSquare2x2()
 			=> base.TestShiftingSquare2x2();
 
 		[TestMethod]
-		public override void TestShiftingSquare3x3() 
+		public override void TestShiftingSquare3x3()
 			=> base.TestShiftingSquare3x3();
 
 		[TestMethod]
-		public override void TestShiftingSquare4x4() 
+		public override void TestShiftingSquare4x4()
 			=> base.TestShiftingSquare4x4();
 
 		[TestMethod]

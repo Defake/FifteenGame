@@ -24,9 +24,16 @@ namespace FifteenGame
 		{
 			_history = new List<int>();
 		}
+		
+		public GameImmutableProductive(GameImmutableProductive old, int shiftValue) : this(old) 
+		{
+			//_history = old._history; // This breakes immutability
 
-		public GameImmutableProductive(GameImmutableProductive old, int shiftValue) : this(old) {
-			_history = old._history;
+			_history = new List<int>();
+			foreach (int i in old._history)
+			{
+				_history.Add(i);
+			}
 			_history.Add(shiftValue);
 		}
 

@@ -53,5 +53,17 @@ namespace FifteenGame.Test
 		public override void Should_ThrowException_When_TryToCreateGameWithTwoZeroFields() => 
 			base.Should_ThrowException_When_TryToCreateGameWithTwoZeroFields();
 
+		[TestMethod]
+		public virtual void Should_KeepInitialStateOfFields_When_ShiftValue()
+		{
+			var gameImu = creator.CreateGame(1, 2, 3, 0);
+			gameImu.Shift(2);
+
+			Assert.AreEqual(gameImu[0, 0], 1);
+			Assert.AreEqual(gameImu[1, 0], 2);
+			Assert.AreEqual(gameImu[0, 1], 3);
+			Assert.AreEqual(gameImu[1, 1], 0);
+		}
+
 	}
 }
